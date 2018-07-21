@@ -9,7 +9,6 @@
  - 实例相对应网站2：ai智能空间react版   http://react.aiplat.com 
  - 实例相对应网站3：ai智能空间nervjs版  http://nerv.aiplat.com 
 
-
 ---
 
 # 代码目录结构
@@ -17,7 +16,7 @@
 ### 习惯vue后，改为与vueapp类似(https://github.com/womendi/vueapp)
  - config          ------environment配置目录
  - dist            ------npm run build后实际布署代码目录
- - e2e             ------e2e目录(未改)
+ - e2e             ------e2e目录(有关e2e暂时未改)
  - src             ------代码主体目录
  - --- assets      ------静态css、images、less文件目录
  - --- components  ------公共组件目录
@@ -27,6 +26,7 @@
  - --- index.html  ------单页面应用公共html入口文件
  - --- main.ts     ------应用入口文件
  - --- polyfills.ts  ------Browser polyfills & Application imports
+ - --- test.ts       ------有关test暂时未改
  - .angular-cli.json ------angular-cli配置
  - tsconfig.json     ------ts编译配置
  - tslint.json       ------ts规则配置
