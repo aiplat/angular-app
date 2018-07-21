@@ -1,0 +1,18 @@
+<div class="cm_pf cm_bl0 cm_w100">
+    <div class="cm_main2">
+        <div class="cm_main">
+            <ul class="cm_pc_12 cm_tc cm_bf cm_bt1ce cm_br1ce cm_bl1ce">
+                <li *ngFor="let m of this.menuList;index as i" class="cm_pc_{{this.menuList.length}}f {{i>0?'cm_bl1ce':''}} {{this.footData.path==m.url?'cm_c6b':''}}">
+                    <a href="" [routerLink]="m.url">
+                        <div class="cm_pc_12 cm_mt02">
+                            <img class="cm_wh105 cm_bs100" src="{{this.footData.path == m.url?m.imgOn:m.img}}"/>
+                        </div>
+                        <div class="cm_pc_12 cm_mb02">
+                            <span class="cm_fs06 {{this.footData.path==m.url?'cm_c8c':'cm_c4c'}}">{{m.name}}</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

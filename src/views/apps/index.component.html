@@ -1,0 +1,24 @@
+<app-header [headData]='headData'></app-header>
+
+<div class="cm_main">
+  <ul class="cm_pc_12 cm_mt3 cm_mb6">
+    <li class="cm_pc_12 cm_mt05 cm_tc">
+      <img class="cm_wh7 cm_bs100 cm_fc" src={{icon}} />
+    </li>
+    <li class="cm_pc_12">
+      <ul class="cm_pc_12 cm_prl05" *ngFor="let item2 of indexData">
+        <li class="cm_pc_12">
+          <div class="cm_fl cm_prl05 cm_be cm_hl2 cm_mtb05 cm_br02">{{item2.name}}</div>
+        </li>
+        <li class="cm_pc_12 cm_pd05 cm_tc cm_be">
+          <div class="cm_pc_12 cm_lh3 cm_br02 cm_bf cm_bb1ce" *ngFor="let v of item2.arr">
+            <a href="{{v.url}}" target="_blank"><div class="cmtou">{{v.market ? v.market + '-' + v.name : v.name}}</div></a>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<app-beian></app-beian>
+<app-footer [footData]="footData"></app-footer>

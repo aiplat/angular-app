@@ -1,0 +1,23 @@
+<app-header [headData]='headData'></app-header>
+<div class="cm_main">
+  <ul class="cm_pc_12 cm_mt3 cm_mb6">
+    <li class="cm_pc_12 cm_prl05 cm_lh105 cm_ti2 cm_mtb05">
+      <span class="">{{indexData.desc}}</span>
+    </li>
+    <li class="cm_pc_12 cm_prl05 cm_tc cm_mb05">
+      <div class="cm_pc_6 cm_hl2 {{dnid == k ? 'cm_c1b cm_cf' : 'cm_be'}}" (click)="tsone(k)" *ngFor="let v of indexData.dnarr; let k = index">
+        {{v.name}}
+      </div>
+    </li>
+    <li class="cm_pc_12 cm_tc cm_mb05">
+      <div class="{{dnid == k2 ? 'cm_pc_12' : 'cm_dn'}}" *ngFor="let v2 of indexData.dnarr; let k2 = index">
+        <img class="cm_h17 cm_bs100 cm_fc" src={{v2.img}} />
+      </div>
+    </li>
+    <li class="cm_pc_12 cm_prl05 cm_lh1 cm_ti2 cm_mb05">
+      <span class="cm_fs08 cm_c1c">{{indexData.about}}</span>
+    </li>
+  </ul>
+</div>
+<app-beian></app-beian>
+<app-footer [footData]="footData"></app-footer>

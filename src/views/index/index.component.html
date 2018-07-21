@@ -1,0 +1,41 @@
+<app-header [headData]='headData'></app-header>
+
+<div class="cm_main">
+  <ul class="cm_pc_12 cm_mt3 cm_mb6">
+    <li class="cm_pc_12 cm_mt05">
+      <img class="cm_wh7 cm_bs100 cm_br305 cm_lessbr305 cm_fc" src={{icon}} />
+    </li>
+    <li class="cm_pc_12 cm_be">
+      <div class="cm_pc_12 cm_pd05 cm_bf cm_lh105 cm_ti2 cm_mb05">{{indexData.description}}</div>
+    </li>
+    <li class="cm_pc_12 cm_prl05">
+      <div class="cm_pc_12">
+        <div class="cm_fl cm_prl05 cm_be cm_hl2 cm_mtb05 cm_br02">{{indexData.gitName}}</div>
+        <div class="cm_pa cm_tr0 cm_hl3 cm_mr05">
+          <a href={{indexData.gitUrl2}} target="_blank">{{indexData.gitUrl}}</a>
+        </div>
+      </div>
+      <div class="cm_pc_12 cm_pd05 cm_tc cm_be">
+        <div class="cm_pc_12 cm_lh3 cm_br02 cm_bf cm_bb1ce" *ngFor="let v of indexData.gitList">
+          <a href={{v.url}} target="_blank">
+            <div class="cmtou">
+              <span class="cm_c1c cm_fwb">{{v.name}}</span>:
+              <span class="cm_fs08">{{v.desc}}</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </li>
+    <li class="cm_pc_12 cm_prl05 cm_tc">
+      <div class="cm_pc_12 cm_bb1ce">
+        <div class="cm_fl cm_prl05 cm_be cm_hl2 cm_mtb05 cm_br02">{{indexData.cooperation}}</div>
+        <div class="cm_pa cm_tr0 cm_hl3 cm_mr05">
+          <a href={{toEmail()}} target="_blank">{{indexData.email}}</a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<app-beian></app-beian>
+<app-footer [footData]="footData"></app-footer>
