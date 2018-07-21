@@ -59,36 +59,6 @@
 
 ---
 
-# 布署服务器(nginx) http://nginx.org/
- - 直接将npm run build后dist目录中文件放在服务器根目录
- - 若./src/main.js设置的是HashRouter，无需以下一条设置就可以正常运行网站
- - 若./src/main.js设置的是BrowserRouter并且是nginx服务器,设置nginx.conf如下：
-    server {
-        ...
-            location / {
-                root   BrowserHtml;
-                index  index.html index.htm;
-                try_files $uri /index.html;
-            }
-        ...
-    }
-    就是在 location / {} 中添加 一句：try_files $uri /index.html;
-
----
-
-# 命令替换
-
-### 可用cnpm代替npm
- - $ npm install -g cnpm --registry=https://registry.npm.taobao.org
- - 然后所有npm * 可用 cnpm *代替 
- - 例如 cnpm install 、cnpm install -g ** 、cnpm install --save-dev **
-
-### 可用yarn代替npm
- - 然后所有npm * 可用 yarn具体代码代替 
- - 例如 yarn或yarn install 、yarn add **、 yarn add ** --dev
-
----
-
 # 兼容性
  - PC端：使用最新react，不兼容IE8。不使用最新react，兼容IE8。
  - 手机端兼容安卓与ios等等各种系统，不区分机型
